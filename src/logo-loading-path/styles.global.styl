@@ -17,14 +17,9 @@ $class = s($prefixer + '-cclogo-loading')
 .{$class}-ring
   transform rotate(-15deg)
   transform-origin center
+  stroke-dashoffset:1802
   stroke-dasharray:1802
-.{$class}-ring-1
   animation: ui-cclogo-loading-circle-1 1.2s linear  infinite; /* 0s开始，持续1.2s*/
-  stroke-dashoffset:1802
-.{$class}-ring-2
-  stroke-dashoffset:1802
-  animation: ui-cclogo-loading-circle-2 1.2s linear  infinite; /* 0s开始，持续0.7s*/
-
 .{$class}-eye
   animation ui-cclogo-loading-eye 1s infinite
   transform-origin center
@@ -35,17 +30,7 @@ $class = s($prefixer + '-cclogo-loading')
     stroke-dashoffset:1802
   45%, 100%
     stroke-dashoffset:0
-@keyframes ui-cclogo-loading-circle-2
-  0,55%
-    stroke-dashoffset:900
-  100%
-    stroke-dashoffset:0
 
-@keyframes ui-cclogo-loading-circle
-  0
-    transform rotate(0)
-  100%
-    transform rotate(360deg)
 @keyframes ui-cclogo-loading-eye
   0
     opacity 1
