@@ -1,5 +1,5 @@
 @import '../../assets/base'
-$class = s($prefixer + '-cclogo-loading-path-eye')
+$class = s($prefixer + '-cclogo-loading-3-path-eye')
 $circleDashConst = 1802
 $eyeDashConst = 172
 $animateDuration = 1.5s
@@ -19,9 +19,9 @@ $animateDuration = 1.5s
 .{$class}-group
   transform-origin center
   transform rotate(345deg)
-  animation: ui-cclogo-loading-path-eye-svg $animateDuration linear  infinite; /* 0s开始，持续1.2s*/
+  animation: ui-cclogo-loading-3-path-eye-svg $animateDuration linear  infinite; /* 0s开始，持续1.2s*/
 
-@keyframes ui-cclogo-loading-path-eye-svg
+@keyframes ui-cclogo-loading-3-path-eye-svg
   0%
     transform rotate(345deg)
   55%, 100%
@@ -30,7 +30,7 @@ $animateDuration = 1.5s
   
 .{$class}-ring
   transform-origin center
-  animation: ui-cclogo-loading-path-eye-circle $animateDuration linear  infinite forwards
+  animation: ui-cclogo-loading-3-path-eye-circle $animateDuration linear  infinite forwards
   stroke-dashoffset $circleDashConst
   stroke-dasharray $circleDashConst
 
@@ -38,10 +38,10 @@ $animateDuration = 1.5s
   transform-origin center
   stroke-dashoffset: $eyeDashConst
   stroke-dasharray: $eyeDashConst
-  animation ui-cclogo-loading-path-eye-eye $animateDuration linear infinite forwards
+  animation ui-cclogo-loading-3-path-eye-eye $animateDuration linear infinite forwards
 
 
-@keyframes ui-cclogo-loading-path-eye-circle
+@keyframes ui-cclogo-loading-3-path-eye-circle
   0%
     stroke-dashoffset:$circleDashConst
   55%
@@ -55,7 +55,7 @@ $animateDuration = 1.5s
     d path("M50 300 A290,290, 0,1,1, 50.000001858166243,300.02129301676624")
 
 
-@keyframes ui-cclogo-loading-path-eye-eye
+@keyframes ui-cclogo-loading-3-path-eye-eye
   0%
     stroke-dashoffset eyeDashConst
     transform scale(1.2) translate3d(-30px, -3px, 0)

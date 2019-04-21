@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import LogoLoadingRotate from '@components/logo-loading-rotate'
-import LogoLoadingPath from '@components/logo-loading-path-circle'
+import LogoLoadingRotate from '@components/logo-loading-1-rotate'
+import LogoLoadingPath from '@components/logo-loading-2-path-circle'
 import LogoLoadingEye from '@components/logo-loading-path-eye'
 
 export default class BackTopExample extends Component {

@@ -6,7 +6,7 @@ import { PREFIX } from '../../utils/consts'
 import styles from './styles.global.styl'
 
 const cx = classnames.bind(styles)
-const prefixClass = `${PREFIX}-cclogo-loading-path-eye`
+const prefixClass = `${PREFIX}-cclogo-loading-3-path-eye`
 
 
 const SKIN = {
