@@ -1,0 +1,74 @@
+@import '../../assets/base'
+$class = s($prefixer + '-cclogo-loading-4-circle-ring')
+$circleDashConst = 1802
+$eyeDashConst = 172
+$animateDuration = 1.5s
+
+.{$class}
+  width 120px
+  height 120px
+  position relative
+  overflow hidden
+  display flex
+
+.{$class}-svg
+  margin auto
+  width 120px
+  height 120px
+
+// .{$class}-group
+//   transform-origin center
+//   transform rotate(345deg)
+//   animation: ui-cclogo-loading-4-circle-ring-svg $animateDuration linear  infinite; /* 0s开始，持续1.2s*/
+
+@keyframes ui-cclogo-loading-4-circle-ring-svg
+  0%
+    transform rotate(345deg)
+  55%, 100%
+    transform rotate(-15deg)
+
+  
+// .{$class}-ring
+//   transform-origin center
+//   animation: ui-cclogo-loading-4-circle-ring-circle $animateDuration linear  infinite forwards
+//   stroke-dashoffset $circleDashConst
+//   stroke-dasharray $circleDashConst
+
+.{$class}-eye
+  transform-origin center
+  stroke-dashoffset: $eyeDashConst
+  stroke-dasharray: $eyeDashConst
+  animation ui-cclogo-loading-4-circle-ring-eye $animateDuration linear infinite forwards
+
+
+@keyframes ui-cclogo-loading-4-circle-ring-circle
+  0%
+    stroke-dashoffset:$circleDashConst
+  55%
+    stroke-dashoffset:0
+    d path("M-20 300 A320,320, 0,1,1, -20.000001858166243,300.02129301676624")
+  90%
+    stroke-dashoffset:0
+    d path("M50 300 A290,290, 0,1,1, 50.000001858166243,300.02129301676624")
+  100%
+    stroke-dashoffset:0
+    d path("M50 300 A290,290, 0,1,1, 50.000001858166243,300.02129301676624")
+
+
+@keyframes ui-cclogo-loading-4-circle-ring-eye
+  0%
+    stroke-dashoffset eyeDashConst
+    transform scale(1.2) translate3d(-30px, -3px, 0)
+    fill #fff
+  55%
+    transform scale(1.2) translate3d(-30px, -3px, 0)
+    stroke-dashoffset 0
+    fill #fff
+  99%
+    transform scale(1)
+    stroke-dashoffset 0
+    stroke-width 0
+
+  100%
+    stroke-dashoffset 0
+    stroke-width 0
