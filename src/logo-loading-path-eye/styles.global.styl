@@ -2,6 +2,7 @@
 $class = s($prefixer + '-cclogo-loading-path-eye')
 $circleDashConst = 1802
 $eyeDashConst = 172
+$animateDuration = 1.5s
 
 .{$class}
   width 120px
@@ -18,7 +19,7 @@ $eyeDashConst = 172
 .{$class}-group
   transform-origin center
   transform rotate(345deg)
-  animation: ui-cclogo-loading-path-eye-svg 1.5s linear  infinite; /* 0s开始，持续1.2s*/
+  animation: ui-cclogo-loading-path-eye-svg $animateDuration linear  infinite; /* 0s开始，持续1.2s*/
 
 @keyframes ui-cclogo-loading-path-eye-svg
   0%
@@ -29,7 +30,7 @@ $eyeDashConst = 172
   
 .{$class}-ring
   transform-origin center
-  animation: ui-cclogo-loading-path-eye-circle 1.5s linear  infinite forwards
+  animation: ui-cclogo-loading-path-eye-circle $animateDuration linear  infinite forwards
   stroke-dashoffset $circleDashConst
   stroke-dasharray $circleDashConst
 
@@ -37,7 +38,7 @@ $eyeDashConst = 172
   transform-origin center
   stroke-dashoffset: $eyeDashConst
   stroke-dasharray: $eyeDashConst
-  animation ui-cclogo-loading-path-eye-eye 1.5s linear infinite forwards
+  animation ui-cclogo-loading-path-eye-eye $animateDuration linear infinite forwards
 
 
 @keyframes ui-cclogo-loading-path-eye-circle
