@@ -16,102 +16,43 @@ $class = s($prefixer + '-cclogo-loading-path-eye')
 .{$class}-group
   transform-origin center
   transform rotate(345deg)
-  animation: ui-cclogo-loading-svg 1.5s linear  infinite; /* 0s开始，持续1.2s*/
+  animation: ui-cclogo-loading-path-eye-svg 1.5s linear  infinite; /* 0s开始，持续1.2s*/
 
-@keyframes ui-cclogo-loading-svg
+@keyframes ui-cclogo-loading-path-eye-svg
   0
-    // transform rotate(-375deg)
-  transform rotate(345deg)
+    transform rotate(345deg)
   55%, 100%
     transform rotate(-15deg)
 
   
 .{$class}-ring
-  // transform rotate(-15deg)
   transform-origin center
-  // d: path("M10 300 A290,290, 0,1,1, 10.000001858166243,300.02129301676624")
-  animation: ui-cclogo-loading-circle-2 1.5s linear  infinite; /* 0s开始，持续1.2s*/
-  // d path("M-20 300 A320,320, 0,1,1, -20,300")
-  // d path("M-20 300 A320,320, 0,1,1, -20.000001858166243,300.02129301676624")
+  animation: ui-cclogo-loading-path-eye-circle 1.5s linear  infinite; /* 0s开始，持续1.2s*/
   stroke-dashoffset:1802
   stroke-dasharray:1802
 .{$class}-eye
-  animation ui-cclogo-loading-eye 1s infinite
+  animation ui-cclogo-loading-path-eye-eye 1s infinite
   transform-origin center
 
 
-@keyframes ui-cclogo-loading-circle-2
+@keyframes ui-cclogo-loading-path-eye-circle
   0
-    // transform rotate(0)
     stroke-dashoffset:1802
-    // d path("M-20 300 A320,320, 0,1,1, -20,300")
   55%
-    // transform rotate(345deg)
     stroke-dashoffset:0
     d path("M-20 300 A320,320, 0,1,1, -20.000001858166243,300.02129301676624")
   90%
-    // transform rotate(345deg)
     stroke-dashoffset:0
     d path("M50 300 A290,290, 0,1,1, 50.000001858166243,300.02129301676624")
   100%
-    // transform rotate(345deg)
     stroke-dashoffset:0
     d path("M50 300 A290,290, 0,1,1, 50.000001858166243,300.02129301676624")
 
-@keyframes ui-cclogo-loading-circle-1
-  0
-    stroke-dashoffset:1802
-  45%, 100%
-    stroke-dashoffset:0
 
-@keyframes ui-cclogo-loading-eye
+@keyframes ui-cclogo-loading-path-eye-eye
   0
     opacity 1
   25%
     opacity 0
   100%
     opacity 1
-
-
-@keyframes  MH_Path1{
-0%{stroke-dashoffset:705;}
-45%, 100%{stroke-dashoffset: 0;}
-}
-/* 0s开始，持续0.9s，1.1s延迟*/
-
-#MH_Path1{
-stroke-dasharray:705;
-animation: MH_Path1 2s linear both infinite;
-}
-
-@keyframes  MH_Path2{
-0%, 45% {stroke-dashoffset: 645;}
-90%, 100%{stroke-dashoffset: 0;}
-}
-/* 0.9s开始，持续0.9s,0.2s延迟*/
-
-#MH_Path2{
-stroke-dasharray:645;
-animation: MH_Path2 2s linear both infinite;
-}
-
-@keyframes  MH_Path3{
-0%, 90% {stroke-dashoffset: 108;}
-100%{stroke-dashoffset: 0;}
-}
-/* 1.5s开始，持续0.2s*/
-
-#MH_Path3{
-stroke-dasharray:108;
-animation: MH_Path3 2s linear both infinite;
-}
-/* 路径定义成三部分 对应三部分蒙版*/
-
-mask{fill:#FFF}
-#MHPath path{
-fill: none;
-stroke: #ef5813;
-stroke-linecap: round;
-stroke-linejoin: round;
-stroke-width: 40px
-}
