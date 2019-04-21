@@ -14,9 +14,9 @@ export default class BackTopExample extends Component {
           <table>
             <tr>
               <th style={{ padding: '0 20px' }}><h3>V1 旋转动画</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V2 圆圈轨迹动画</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V3 圆圈加眼睛动画</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V4 简化动画</h3></th>
+              <th style={{ padding: '0 20px' }}><h3>V2 圆圈path</h3></th>
+              <th style={{ padding: '0 20px' }}><h3>V3 圆圈path 眼睛path</h3></th>
+              <th style={{ padding: '0 20px' }}><h3>V4 圆圈circle 眼睛path</h3></th>
             </tr>
             <tr>
               <td><LogoLoadingRotate {...this.props} /></td>
