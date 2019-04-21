@@ -1,5 +1,5 @@
 @import '../../assets/base'
-$class = s($prefixer + '-cclogo-loading-2-path-circle')
+$class = s($prefixer + '-cclogo-loading-2-path')
 
 .{$class}
   width 120px
@@ -19,19 +19,19 @@ $class = s($prefixer + '-cclogo-loading-2-path-circle')
   transform-origin center
   stroke-dashoffset:1802
   stroke-dasharray:1802
-  animation: ui-cclogo-loading-path-2-circle-ring 1.2s linear  infinite; /* 0s开始，持续1.2s*/
+  animation: ui-cclogo-loading-path-2-ring 1.2s linear  infinite; /* 0s开始，持续1.2s*/
 .{$class}-eye
-  animation ui-cclogo-loading-path-2-circle-eye 1s infinite
+  animation ui-cclogo-loading-path-2-eye 1s infinite
   transform-origin center
 
 
-@keyframes ui-cclogo-loading-path-2-circle-ring
+@keyframes ui-cclogo-loading-path-2-ring
   0
     stroke-dashoffset:1802
   45%, 100%
     stroke-dashoffset:0
 
-@keyframes ui-cclogo-loading-path-2-circle-eye
+@keyframes ui-cclogo-loading-path-2-eye
   0
     opacity 1
   25%
