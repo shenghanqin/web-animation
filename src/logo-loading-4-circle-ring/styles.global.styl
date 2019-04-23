@@ -1,0 +1,91 @@
+@import '../../assets/base'
+$class = s($prefixer + '-cclogo-loading-4-circle-ring')
+$circleDashConst1 = 1802
+$circleDashConst2 = 2011
+$eyeDashConst = 172
+$animateDuration = 1.5s
+
+common-props(name)
+  animation-duration 1.5s
+  animation-timing-function linear
+  animation-iteration-count infinite
+  animation-fill-mode forwards
+  animation-name name
+
+.{$class}
+  width 120px
+  height 120px
+  position relative
+  overflow hidden
+  display flex
+
+.{$class}-svg
+  margin auto
+  width 120px
+  height 120px
+
+.{$class}-group
+  transform-origin center
+  transform rotate(165deg)
+  common-props(ui-cclogo-loading-4-circle-ring-svg)
+
+@keyframes ui-cclogo-loading-4-circle-ring-svg
+  0%
+    transform rotate(-195deg)
+  55%, 95%, 100%
+    transform rotate(165deg)
+
+  
+.{$class}-ring
+  transform-origin center
+  stroke-dasharray ($circleDashConst1)
+
+  common-props(ui-cclogo-loading-4-circle-ring-ring)
+
+.{$class}-eye
+  transform-origin center
+  stroke-dashoffset: $eyeDashConst
+  stroke-dasharray: $eyeDashConst
+  common-props(ui-cclogo-loading-4-circle-ring-eye)
+
+
+@keyframes ui-cclogo-loading-4-circle-ring-ring
+  0%
+    r 320px
+    cx 300px
+    stroke-dasharray $circleDashConst2
+    stroke-dashoffset $circleDashConst2
+
+  55%
+    opacity 1
+    r 320px
+    cx 300px
+    stroke-dasharray $circleDashConst2
+    stroke-dashoffset:0
+  
+  95%
+    stroke-dasharray ($circleDashConst1)
+    stroke-dashoffset:0
+
+  100%
+    stroke-dasharray ($circleDashConst1)
+    stroke-dashoffset:0
+
+
+@keyframes ui-cclogo-loading-4-circle-ring-eye
+  0%
+    stroke-dashoffset eyeDashConst
+    transform scale(1.2) translate3d(-30px, -3px, 0)
+    fill #fff
+  55%
+    transform scale(1.2) translate3d(-30px, -3px, 0)
+    stroke-dashoffset 0
+    fill #fff
+  95%
+    transform scale(1)
+    stroke-dashoffset 0
+    stroke-width 0
+
+  100%
+    stroke-dashoffset 0
+    stroke-width 0
