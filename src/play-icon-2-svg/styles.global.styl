@@ -1,0 +1,27 @@
+@import '../../assets/base'
+$class = s($prefixer + '-play-icon-2-svg')
+
+$slider-color = rgb(69,147,248)
+
+$border-width = 60px
+
+
+.{$class}
+  width 120px
+  height 120px
+  display flex
+
+  &>svg
+    width: 100%
+    height 100%
+
+
+.{$class}-btn-play
+  d path("M0 0,L48 30,L96 60, L48 90, L0 120")
+  transition: 600ms all ease;
+  cursor: pointer;
+
+.{$class}-pause
+  d path("M0 12,L96 12,L96 60, L96 108, L0 108")
+  mask: url(#ui-play-icon-2-svg-mask)
+  transition: 400ms d ease, 200ms mask 400ms;
