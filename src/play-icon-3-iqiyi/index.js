@@ -56,14 +56,14 @@ export default class LogoLoading extends Component {
             fill="none"
             strokeLinejoin="round"
           ></path>
-          {/* <path className={cx(`${audioClass}-second-left`)}
+          <path className={cx(`${audioClass}-second-left`)}
             d="M14 -24, L14 108"
             stroke={iconColor}
             strokeWidth="22"
             strokeLinecap="round"
             fill="none"
             strokeLinejoin="round"
-          ></path> */}
+          ></path>
           
           <path className={cx(`${audioClass}-middle`)}
             d="M14 60, L14 95, A18,8, 0,0,0, 77 95, L77 60"
@@ -73,14 +73,14 @@ export default class LogoLoading extends Component {
             fill="none"
             strokeLinejoin="round"
           ></path>
-          {/* <path className={cx(`${audioClass}-second-right`)}
+          <path className={cx(`${audioClass}-second-right`)}
             d="M77 12, L77 108"
             stroke={iconColor}
             strokeWidth="22"
             strokeLinecap="round"
             fill="none"
             strokeLinejoin="round"
-          ></path> */}
+          ></path>
         </svg>
       </div>
     )

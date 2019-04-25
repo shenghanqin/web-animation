@@ -7,9 +7,8 @@ $border-width = 60px
 $circleDashConst1 = 154
 
 common-animate(name)
-  animation-duration 9s
+  animation-duration .9s
   animation-timing-function linear
-  animation-iteration-count infinite
   animation-fill-mode forwards
   animation-name name
 
@@ -40,6 +39,8 @@ common-animate(name)
     stroke-dashoffset: 276
 
 .{$class}-middle
+  stroke-dasharray: 172
+  // stroke-dashoffset: 161
   common-animate(ui-play-icon-3-iqiyi-middle)
 
 
