@@ -26,7 +26,6 @@ common-animate(name)
 
 .{$class}-first
   stroke-dasharray: 276
-  stroke-dashoffset: 276
   common-animate(ui-play-icon-3-iqiyi-first)
   
 
@@ -40,7 +39,6 @@ common-animate(name)
 
 .{$class}-middle
   stroke-dasharray: 172
-  // stroke-dashoffset: 161
   common-animate(ui-play-icon-3-iqiyi-middle)
 
 
@@ -61,8 +59,9 @@ common-animate(name)
 @keyframes ui-play-icon-3-iqiyi-second-left
   0%
     stroke-dashoffset: 108
-  45%
+  40%
     stroke-dashoffset: 108
+    animation-timing-function ease
   100%
     stroke-dashoffset: -36
   
