@@ -77,7 +77,7 @@ export default class LogoLoading extends Component {
             strokeLinejoin="round"
           ></path>
           <path className={cx(`${audioClass}-second-right`)}
-            d="M77 12, L77 108"
+            d="M77 12, L77 144"
             stroke={iconColor}
             strokeWidth="22"
             strokeLinecap="round"
