@@ -1,0 +1,140 @@
+@import '../../assets/base'
+$class = s($prefixer + '-play-icon-3-iqiyi')
+
+$slider-color = rgb(69,147,248)
+
+$border-width = 60px
+$circleDashConst1 = 154
+
+common-animate(name)
+  animation-duration .9s
+  animation-timing-function linear
+  animation-fill-mode forwards
+  animation-name name
+
+.{$class}
+  width 120px
+  height 120px
+  display flex
+
+  &>svg
+    width: 100%
+    height 100%
+    
+.{$class}-play
+  .{$class}-first
+    stroke-dasharray: 276
+  .{$class}-middle
+    stroke-dasharray: 172
+  .{$class}-second-left
+    stroke-dasharray:  120
+  .{$class}-second-right
+    stroke-dasharray:  120
+
+
+.{$class}-pause
+  .{$class}-first
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-first)
+  .{$class}-middle
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-middle)
+  .{$class}-second-left
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-second-left)
+  .{$class}-second-right
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-second-right)
+
+
+.{$class}-play
+  .{$class}-first
+    common-animate(ui-play-icon-3-iqiyi-ani-play-first)
+  .{$class}-middle
+    common-animate(ui-play-icon-3-iqiyi-ani-play-middle)
+  .{$class}-second-left
+    common-animate(ui-play-icon-3-iqiyi-ani-play-second-left)
+  .{$class}-second-right
+    common-animate(ui-play-icon-3-iqiyi-ani-play-second-right)
+
+
+.{$class}-pause
+  .{$class}-first
+    stroke-dasharray: 276
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-first)
+  .{$class}-middle
+    stroke-dasharray: 172
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-middle)
+  .{$class}-second-left
+    stroke-dasharray:  120
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-second-left)
+  .{$class}-second-right
+    stroke-dasharray:  120
+    common-animate(ui-play-icon-3-iqiyi-ani-pause-second-right)
+
+
+
+@keyframes ui-play-icon-3-iqiyi-ani-play-first
+  0%
+    stroke-dashoffset: 276
+  33%
+    stroke-dashoffset: 276
+  100%
+    stroke-dashoffset: 0
+@keyframes ui-play-icon-3-iqiyi-ani-play-middle
+  0%, 33%
+    stroke-dashoffset: -107
+  66%
+    stroke-dashoffset: 107
+  100%
+    stroke-dashoffset: 161
+
+@keyframes ui-play-icon-3-iqiyi-ani-play-second-left
+  0%
+    stroke-dashoffset: -36
+  60%
+    stroke-dashoffset: 108
+  100%
+    stroke-dashoffset: 108
+
+@keyframes ui-play-icon-3-iqiyi-ani-play-second-right
+  0%
+    stroke-dashoffset: 24  
+  17%
+    stroke-dashoffset: 24
+  33%
+    stroke-dashoffset: -120
+  100%
+    stroke-dashoffset: -120
+
+@keyframes ui-play-icon-3-iqiyi-ani-pause-first
+  0%
+    stroke-dashoffset: 0
+  66%
+    stroke-dashoffset: 276
+  100%
+    stroke-dashoffset: 276
+
+@keyframes ui-play-icon-3-iqiyi-ani-pause-middle
+  0%
+    stroke-dashoffset: 161
+  33%
+    stroke-dashoffset: 107
+  66%, 100%
+    stroke-dashoffset: -107
+
+
+@keyframes ui-play-icon-3-iqiyi-ani-pause-second-left
+  0%
+    stroke-dashoffset: 108
+  40%
+    stroke-dashoffset: 108
+    animation-timing-function ease
+  100%
+    stroke-dashoffset: -36
+
+@keyframes ui-play-icon-3-iqiyi-ani-pause-second-right
+  0%
+    stroke-dashoffset: -120
+  67%
+    stroke-dashoffset: -120
+  83%
+    stroke-dashoffset: 24
+  100%
+    stroke-dashoffset: 24
