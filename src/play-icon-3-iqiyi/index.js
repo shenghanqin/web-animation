@@ -47,7 +47,10 @@ export default class LogoLoading extends Component {
     
     return (
       <div className={cx(`${audioClass}`)} style={style} onClick={this.changeStatus}>
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-btn-play`, { [`${audioClass}-pause`]: status === AUDIO_STATUS.PLAYING })}>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-btn`, {
+          [`${audioClass}-play`]: status !== AUDIO_STATUS.PLAYING,
+          [`${audioClass}-pause`]: status === AUDIO_STATUS.PLAYING
+        })}>
           <path className={cx(`${audioClass}-first`)}
             d="M14 65,L14 25, A19,12, 0,0,1, 33,13, L91, 49, A12,22, 0,0,1, 91 71, L33 107, A19,12, 0,0,1, 14 95, L14 65"
             stroke={iconColor}
