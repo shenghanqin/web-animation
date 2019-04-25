@@ -1,0 +1,85 @@
+@import '../../assets/base'
+$class = s($prefixer + '-play-icon-3-iqiyi')
+
+$slider-color = rgb(69,147,248)
+
+$border-width = 60px
+$circleDashConst1 = 154
+
+common-animate(name)
+  animation-duration 9s
+  animation-timing-function linear
+  animation-iteration-count infinite
+  animation-fill-mode forwards
+  animation-name name
+
+.{$class}
+  width 120px
+  height 120px
+  display flex
+
+  &>svg
+    width: 100%
+    height 100%
+    background: #000
+
+
+
+.{$class}-first
+  stroke-dasharray: 276
+  stroke-dashoffset: 276
+  common-animate(ui-play-icon-3-iqiyi-first)
+  
+
+@keyframes ui-play-icon-3-iqiyi-first
+  0%
+    stroke-dashoffset: 0
+  66%
+    stroke-dashoffset: 276
+  100%
+    stroke-dashoffset: 276
+
+.{$class}-middle
+  common-animate(ui-play-icon-3-iqiyi-middle)
+
+
+
+
+@keyframes ui-play-icon-3-iqiyi-middle
+  0%
+    stroke-dashoffset: 161
+  33%
+    stroke-dashoffset: 107
+  66%, 100%
+    stroke-dashoffset: -107
+
+.{$class}-second-left
+  stroke-dasharray:  120
+  common-animate(ui-play-icon-3-iqiyi-second-left)
+
+@keyframes ui-play-icon-3-iqiyi-second-left
+  0%
+    stroke-dashoffset: 108
+  45%
+    stroke-dashoffset: 108
+  100%
+    stroke-dashoffset: -36
+  
+.{$class}-second-right
+  common-animate(ui-play-icon-3-iqiyi-second-right)
+
+
+@keyframes ui-play-icon-3-iqiyi-second-right
+  0%
+    stroke-dasharray: 0, 97
+    stroke-dashoffset: 1
+  39%
+    stroke-dasharray: 0, 97
+    stroke-dashoffset: 1
+  67%
+    stroke-dasharray:  48, 48
+    stroke-dashoffset: 60
+  83%
+    stroke-dashoffset: 96
+  100%
+    stroke-dashoffset: 100
