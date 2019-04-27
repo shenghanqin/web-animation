@@ -63,21 +63,25 @@ export default class LogoLoading extends Component {
 
           </g>
         </g>
-        <rect className={cx(`${audioClass}-eye`)} x="0" y="8.6" rx="15" ry="15" width="103.4" height="103.4" fill={iconColor} transform="scale(1)">
-          <animate attributeType="XML"
-            attributeName="rx"
-            values="51.7;51.7;15"
-            dur={DURATION_TIME} />
-          <animate attributeType="XML"
-            attributeName="ry"
-            values="51.7;51.7;15"
-            dur={DURATION_TIME} />
-          <animateTransform attributeType="XML"
-            attributeName="transform" type="scale"
-            origin="center"
-            values="0.3; 0.5; 1"
-            dur={DURATION_TIME} />
-        </rect>
+        <g transform="translate(51.7, 51.7)">
+          <rect className={cx(`${audioClass}-eye`)} x="-51.7" y="-43" rx="15" ry="15" width="103.4" height="103.4" fill={iconColor} transform="scale(1)">
+            <animate attributeType="XML"
+              attributeName="rx"
+              values="51.7;51.7;15"
+              dur={DURATION_TIME} />
+            <animate attributeType="XML"
+              attributeName="ry"
+              values="51.7;51.7;15"
+              dur={DURATION_TIME} />
+            <animateTransform attributeType="XML"
+              attributeName="transform" type="scale"
+              origin="center"
+              values="0.3; 0.5; 1"
+              calcMode="spline"
+              keySplines="0.5 0 0.5 1;0.5 0 0.5 1"
+              dur={DURATION_TIME} />
+          </rect>
+        </g>
       </svg>
     )
   }
@@ -107,20 +111,22 @@ export default class LogoLoading extends Component {
 
             </g>
           </g>
-          <rect className={cx(`${audioClass}-eye`)} x="0" y="8.6" rx="51.7" ry="51.7" width="103.4" height="103.4" fill={iconColor} transform="scale(0.3)">
-            <animate attributeType="XML"
-              attributeName="rx"
-              values="15;51.7;51.7"
-              dur={DURATION_TIME}  />
-            <animate attributeType="XML"
-              attributeName="ry"
-              values="15;51.7;51.7"
-              dur={DURATION_TIME} />
-            <animateTransform attributeType="XML"
-              attributeName="transform" type="scale"
-              values="1; 0.5; 0.3"
-              dur={DURATION_TIME} />
-          </rect>
+          <g transform="translate(51.7, 51.7)">
+            <rect className={cx(`${audioClass}-eye`)} x="-51.7" y="-43" rx="51.7" ry="51.7" width="103.4" height="103.4" fill={iconColor} transform="scale(0.3)">
+              <animate attributeType="XML"
+                attributeName="rx"
+                values="15;51.7;51.7"
+                dur={DURATION_TIME}  />
+              <animate attributeType="XML"
+                attributeName="ry"
+                values="15;51.7;51.7"
+                dur={DURATION_TIME} />
+              <animateTransform attributeType="XML"
+                attributeName="transform" type="scale"
+                values="1; 0.5; 0.3"
+                dur={DURATION_TIME} />
+            </rect>
+          </g>
         </svg>
       </div>
     )
