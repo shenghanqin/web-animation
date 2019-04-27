@@ -55,8 +55,7 @@ export default class LogoLoading extends Component {
             <mask id={`${audioClass}-mask`}>
               <polygon fill="white" points="0,0 103.4,60 0,120" />
             </mask>
-            <circle className={cx(`${audioClass}-ring`)} cx="34.64" cy="60" r="69.2" fill="red" mask={`url(#${audioClass}-mask)`}>
-            </circle>
+            <circle className={cx(`${audioClass}-ring`)} cx="34.64" cy="60" r="69.2" fill="red" mask={`url(#${audioClass}-mask)`} />
           </g>
           <rect className={cx(`${audioClass}-eye`)} x="0" y="8.6" rx="51.7" ry="51.7" width="103.4" height="103.4" fill="red" />
         </svg>
