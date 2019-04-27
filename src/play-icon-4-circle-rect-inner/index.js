@@ -1,5 +1,5 @@
 // cc 机器人的loading图标
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames/bind'
 import { PREFIX } from '../../utils/consts'
@@ -41,7 +41,7 @@ export default class LogoLoading extends Component {
   }
 
   renderToPause = () => {
-    let { skin, style } = this.props
+    let { skin } = this.props
     let iconColor = SKIN[skin] || skin
     return (
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-btn`)}>
@@ -83,7 +83,7 @@ export default class LogoLoading extends Component {
 
   // 反向
   renderToPlay = () => {
-    let { skin, style } = this.props
+    let { skin } = this.props
     let iconColor = SKIN[skin] || skin
     return (
       <div>
@@ -126,12 +126,9 @@ export default class LogoLoading extends Component {
   }
 
   render() {
-    let { skin, style } = this.props
-    let iconColor = SKIN[skin] || skin
+    let { style } = this.props
     const { status } = this.state
-    // 第一版 直线路径 M14 95,L14 25,L33 13, L91, 49, L91 71, L33 107, L14 95
-    // 中间转折处长度为 （71-49)/2=11，
-    const toPaused = status !== AUDIO_STATUS.PLAYING
+
     return (
       <div className={cx(`${audioClass}`)} style={style} onClick={this.changeStatus}>
         {status === AUDIO_STATUS.PLAYING ? this.renderToPause() : this.renderToPlay() }
