@@ -8,7 +8,7 @@ import styles from './styles.global.styl'
 const cx = classnames.bind(styles)
 const audioClass = `${PREFIX}-play-icon-4-circle-rect-inner`
 
-const DURATION_TIME = '0.6s'
+const DURATION_TIME = '6s'
 
 const SKIN = {
   blue: '#2F5AFF',
@@ -53,24 +53,11 @@ export default class LogoLoading extends Component {
           [`${audioClass}-play`]: status !== AUDIO_STATUS.PLAYING,
           [`${audioClass}-pause`]: status === AUDIO_STATUS.PLAYING
         })}>
-          <g className={cx(`${audioClass}-group`)} style={{ transform: toPaused ? 'translate(18px, 0)' : 'translate(0, 0)' }}>
-            {
-              toPaused
-                ? (
-                  <animateTransform attributeType="XML"
-                    attributeName="transform" type="translate"
-                    values="0 0; 18 0; 18 0"
-                    dur={DURATION_TIME} />
-                )
-                : (
-                  <animateTransform attributeType="XML"
-                    attributeName="transform" type="translate"
-                    values="18 0; 18 0; 0 0"
-                    dur={DURATION_TIME} />
-                )
-
-            }
-            
+          <g className={cx(`${audioClass}-group`)} transform="translate(19, 0)">
+          <animateTransform attributeType="XML"
+            attributeName="transform" type="translate"
+            values="0 0; 19 0; 19 0"
+            dur={DURATION_TIME} />   
             <g>
               <mask id={`${audioClass}-mask`}>
                 <polygon fill="white" points="0,0 103.4,60 0,120" />
@@ -84,7 +71,7 @@ export default class LogoLoading extends Component {
               
             </g>
           </g>
-          <rect className={cx(`${audioClass}-eye`)} x="0" y="8.6" rx="15" ry="15" width="103.4" height="103.4" fill="red">
+          <rect className={cx(`${audioClass}-eye`)} x="0" y="8.6" rx="15" ry="15" width="103.4" height="103.4" fill="blue" opacity="0.5">
             <animate attributeType="XML"
               attributeName="rx"
               values="51.7;51.7;15" 
