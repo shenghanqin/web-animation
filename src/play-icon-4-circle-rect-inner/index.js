@@ -8,7 +8,7 @@ import styles from './styles.global.styl'
 const cx = classnames.bind(styles)
 const audioClass = `${PREFIX}-play-icon-4-circle-rect-inner`
 
-const DURATION_TIME = '6s'
+const DURATION_TIME = '0.6s'
 
 const SKIN = {
   blue: '#2F5AFF',
