@@ -8,7 +8,7 @@ import styles from './styles.global.styl'
 const cx = classnames.bind(styles)
 const audioClass = `${PREFIX}-play-icon-4-circle-rect-inner`
 
-const DURATION_TIME = '0.6s'
+const DURATION_TIME = '6s'
 
 const SKIN = {
   blue: '#2F5AFF',
@@ -30,7 +30,7 @@ export default class LogoLoading extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      status: AUDIO_STATUS.IDLE
+      status: AUDIO_STATUS.PLAYING
     }
   }
 
@@ -44,7 +44,7 @@ export default class LogoLoading extends Component {
     let { skin } = this.props
     let iconColor = SKIN[skin] || skin
     return (
-      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-btn`)}>
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-svg`)}>
         <g className={cx(`${audioClass}-group`)} transform="translate(19, 0)">
           <animateTransform attributeType="XML"
             attributeName="transform" type="translate"
@@ -74,6 +74,7 @@ export default class LogoLoading extends Component {
             dur={DURATION_TIME} />
           <animateTransform attributeType="XML"
             attributeName="transform" type="scale"
+            origin="center"
             values="0.3; 0.5; 1"
             dur={DURATION_TIME} />
         </rect>
@@ -87,7 +88,7 @@ export default class LogoLoading extends Component {
     let iconColor = SKIN[skin] || skin
     return (
       <div>
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-btn`)}>
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-svg`)}>
           <g className={cx(`${audioClass}-group`)} transform="translate(0, 0)">
             <animateTransform attributeType="XML"
               attributeName="transform" type="translate"
