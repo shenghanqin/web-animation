@@ -18,3 +18,16 @@ $class = s($prefixer + '-play-icon-5-rect-skew')
 .{$class}-to-pause .{$class}-ring
   transform: rotate(0) skew(0, 0) translate(0, 0) scale(0.8) 
   stroke-width: 30
+
+.{$class}-ie-polygon
+  transition all 0.3s ease-in-out
+
+.{$class}-ie-rect
+  opacity 0
+  transition all 0.3s ease-in-out
+
+.{$class}-to-pause
+  .{$class}-ie-rect
+    opacity 1
+  .{$class}-ie-polygon
+    opacity 0
