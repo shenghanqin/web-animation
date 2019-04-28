@@ -1,0 +1,23 @@
+@import '../../assets/base'
+$class = s($prefixer + '-play-icon-5-rect-skew')
+
+$slider-color = rgb(69,147,248)
+
+.{$class}
+  width 120px
+  height 120px
+  display flex
+
+.{$class}-svg
+  width: 100%
+  height 100%
+
+.{$class}-ring
+  transform-origin center
+  transition all 0.24s ease-in-out
+  transform: rotate(-45deg) skew(15deg, 15deg) translate(-21%, -27%) scale(1.1) 
+  stroke-linejoin round
+
+.{$class}-to-pause .{$class}-ring
+  transform: rotate(0) skew(0, 0) translate(0, 0) scale(0.8) 
+  stroke-width: 30
