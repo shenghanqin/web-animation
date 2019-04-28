@@ -8,8 +8,6 @@ import styles from './styles.global.styl'
 const cx = classnames.bind(styles)
 const audioClass = `${PREFIX}-play-icon-5-rect-skew`
 
-const DURATION_TIME = '0.6s'
-
 const SKIN = {
   blue: '#2F5AFF',
   white: '#fff'
@@ -52,7 +50,6 @@ export default class LogoLoading extends Component {
     let { style, skin } = this.props
     const { status } = this.state
     let iconColor = SKIN[skin] || skin
-    console.log(status)
     return (
       <div className={cx(`${audioClass}`)} style={style} onClick={this.changeStatus}>
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" className={cx(`${audioClass}-svg`, {
