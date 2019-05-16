@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 
-import LogoLoadingRotate from '@components/logo-loading-1-rotate'
-import LogoLoadingPath from '@components/logo-loading-2-path'
-import LogoLoadingEye from '@components/logo-loading-3-path-eye'
-import LogoLoadingRing from '@components/logo-loading-4-circle-ring'
+import CssVar1Rating from '@components/css-var-1-rating'
+
 
 export default class BackTopExample extends Component {
 
@@ -11,20 +9,7 @@ export default class BackTopExample extends Component {
     return (
       <div>
         <React.StrictMode>
-          <table>
-            <tr>
-              <th style={{ padding: '0 20px' }}><h3>V1 旋转动画</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V2 圆圈path</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V3 圆圈path 眼睛path</h3></th>
-              <th style={{ padding: '0 20px' }}><h3>V4 圆圈circle 眼睛path</h3></th>
-            </tr>
-            <tr>
-              <td><LogoLoadingRotate {...this.props} /></td>
-              <td><LogoLoadingPath {...this.props} /></td>
-              <td><LogoLoadingEye {...this.props} /></td>
-              <td><LogoLoadingRing {...this.props} /></td>
-            </tr>
-          </table>
+          <CssVar1Rating></CssVar1Rating>
         </React.StrictMode>
       </div>
     )
