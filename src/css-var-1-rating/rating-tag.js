@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './rating-tag.global.styl'
 import { PREFIX } from '../../utils/consts'
 
-const prefixClass = `${PREFIX}-rating-tag`
+const prefixClass = `${PREFIX}-css-var-1-rating-tag`
 const cx = require('classnames/bind').bind(styles)
 
 export default class RatingTag extends React.PureComponent {
