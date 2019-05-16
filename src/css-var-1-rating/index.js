@@ -7,7 +7,7 @@ import RatingTag from './rating-tag'
 import RatingItem from './rating-item'
 
 
-const prefixClass = `${PREFIX}-rating`
+const prefixClass = `${PREFIX}-css-var-1-rating`
 const cx = require('classnames/bind').bind(styles)
 
 export default class CssVar1Rating extends React.PureComponent {

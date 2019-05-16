@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './rating-star.global.styl'
 import { PREFIX } from '../../utils/consts'
 
-const prefixClass = `${PREFIX}-css-var-1-ratingrating-star`
+const prefixClass = `${PREFIX}-css-var-1-rating-star`
 const cx = require('classnames/bind').bind(styles)
 
 /**

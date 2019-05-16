@@ -42,6 +42,7 @@ $class = s($prefixer + '-css-var-1-rating-item')
   line-height 1.5
   font-size 16px
   color #2F3742
+  color var(s('--' + $class + '-dec-color'))
   font-weight 300
   word-break break-word
   word-wrap break-word
@@ -64,6 +65,9 @@ $class = s($prefixer + '-css-var-1-rating-item')
   font-size: 12px
   padding 0 6px
   color #2F5AFF
+  color var(s('--' + $class + '-tag-color'))
+  background-color var(s('--' + $class + '-tag-bg-color'))
+  box-shadow 0 0 0 1px var(s('--' + $class + '-tag-shadow-color'))
 
 .{$class}-tag-more
   display none
@@ -87,6 +91,7 @@ $class = s($prefixer + '-css-var-1-rating-item')
     line-height: 20px
     font-size: 12px
     color #2F5AFF
+    color var(s('--' + $class + '-tag-color'))
     cursor pointer
 
 // 回复展示
@@ -102,10 +107,15 @@ $class = s($prefixer + '-css-var-1-rating-item')
   word-break break-word
   word-wrap break-word
   white-space pre-wrap
+
+  color var(s('--' + $class + '-reply-text-color'))
+  background-color var(s('--' + $class + '-reply-text-bg-color'))
+
   @media (min-width ($max-body-width + 1px))
     font-weight normal
   span
     color #95A1AF
+    color var(s('--' + $class + '-reply-text-span-color'))
     
   &:before
     display inline-block
@@ -113,6 +123,7 @@ $class = s($prefixer + '-css-var-1-rating-item')
     width 10px
     height 10px
     background-color #F6F7F9
+    background-color var(s('--' + $class + '-reply-text-before-color'))
     position absolute
     margin-left 17px
     margin-top -17px

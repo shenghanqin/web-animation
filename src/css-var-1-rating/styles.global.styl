@@ -1,15 +1,26 @@
 @import '../../assets/base'
-$class = s($prefixer + '-rating')
-$classStar = s($prefixer + '-rating-star')
-$classTag = s($prefixer + '-rating-tag')
-$class-logo = s($prefixer-zebra + '-cclogo-loading')
+$class = s($prefixer + '-css-var-1-rating')
+$classStar = s($prefixer + '-css-var-1-rating-star')
+$classTag = s($prefixer + '-css-var-1-rating-tag')
+$classItem = s($prefixer + '-css-var-1-rating-item')
+$class-logo = s($prefixer-zebra + '-css-var-1-cclogo-loading')
+
+.{$class}
+  {'--' + $class + '-title-color'} #2F3742
+  {'--' + $class + '-r-left-color'} #2F5AFF
+  {'--' + $class + '-r-people-color'} #687583
+  {'--' + $classTag + '-item-bg-color'} #f8f8f8
+  {'--' + $classTag + '-item-color'} #687583
+  {'--' + $classItem + '-tag-color'} #2F5AFF
+  {'--' + $classItem + '-tag-bg-color'} rgba(47, 90, 255, 0.08)
+  {'--' + $classItem + '-tag-shadow-color'} rgba(47, 90, 255, 0.4)
+  {'--' + $classItem + '-dec-color'} #2F3742
 
 .ui-rating-text-loading
   color #687583
   font-style italic
   text-align center
-// .{$class}
-//   margin-top 48px
+
 
 .{$class}-loading
   padding 30px 0
@@ -22,6 +33,7 @@ $class-logo = s($prefixer-zebra + '-cclogo-loading')
   font-size 24px
   line-height 1.375
   color #2F3742
+  color var(s('--' + $class + '-title-color'))
   margin-bottom 18px
   padding-left: 16px
   @media (min-width ($max-body-width + 1px))
@@ -41,6 +53,7 @@ $class-logo = s($prefixer-zebra + '-cclogo-loading')
   float left
   font-size 44px
   color #2F5AFF
+  color var(s('--' + $class + '-r-left-color'))
   font-weight 600
   span
     font-size 14px
@@ -62,6 +75,7 @@ $class-logo = s($prefixer-zebra + '-cclogo-loading')
   margin 9px auto 4px
   font-size 13px
   color #687583
+  color var(s('--' + $class + '-r-people-color'))
 .{$class}-less-tips
   font-size 13px
   color #95A1AF
