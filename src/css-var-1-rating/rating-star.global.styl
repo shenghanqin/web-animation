@@ -1,0 +1,18 @@
+@import '../../assets/base'
+$class = s($prefixer + '-rating-star')
+
+.{$class}
+  overflow hidden
+.{$class}-item
+  float left
+  width 12px
+  height 12px
+  margin-right 3px
+  background-size contain
+  background-repeat no-repeat
+  &[data-type="whole"]
+    background-image url(https://n1image.hjfile.cn/res7/2018/10/27/5fd7a6f63c176d19a96784e45bad5ef7.png)
+  &[data-type="half"]
+    background-image url(https://n1image.hjfile.cn/res7/2018/10/27/bc922b0b0fb3a471f0fbb807e8cc37ee.png)
+  &[data-type="empty"]
+      background-image url(https://n1image.hjfile.cn/res7/2018/10/27/87a38a0792f021cf440cc4805fd573ee.png)
