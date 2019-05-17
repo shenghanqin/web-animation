@@ -1,0 +1,28 @@
+@import '../../../assets/base'
+$class = s($prefixer + '-css-var-1-rating')
+$classStar = s($prefixer + '-css-var-1-rating-star')
+$classTag = s($prefixer + '-css-var-1-rating-tag')
+$classItem = s($prefixer + '-css-var-1-rating-item')
+$class-logo = s($prefixer-zebra + '-css-var-1-cclogo-loading')
+
+.side-by-side
+  display flex
+
+.dark-theme
+  .{$class}
+    background #000
+    {'--' + $class + '-title-color'} #FFFFFF
+    {'--' + $class + '-r-left-color'} #FFC453
+    {'--' + $class + '-r-people-color'} rgba(255, 255, 255, 0.8)
+    {'--' + $classTag + '-item-bg-color'} rgba(255, 255, 255, 0.06)
+    {'--' + $classTag + '-item-color'} rgba(255, 255, 255, 0.8)
+    {'--' + $classItem + '-tag-color'} #2F5AFF
+    {'--' + $classItem + '-tag-bg-color'} var(s('--' + $classTag + '-item-bg-color'))
+    {'--' + $classItem + '-tag-color'} var(s('--' + $classTag + '-item-color'))
+    {'--' + $classItem + '-tag-shadow-color'} rgba(255, 255, 255, 0.2)
+    {'--' + $classItem + '-dec-color'} rgba(255, 255, 255, 0.9)
+    {'--' + $classItem + '-reply-text-bg-color'} var(s('--' + $classTag + '-item-bg-color'))
+    {'--' + $classItem + '-reply-text-color'} var(s('--' + $classTag + '-item-color'))
+    {'--' + $classItem + '-reply-text-span-color'} var(s('--' + $classTag + '-item-color'))
+    {'--' + $classItem + '-reply-text-before-color'} var(s('--' + $classTag + '-item-bg-color'))
+
