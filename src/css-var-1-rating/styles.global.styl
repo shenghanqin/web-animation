@@ -1,0 +1,101 @@
+@import '../../assets/base'
+$class = s($prefixer + '-css-var-1-rating')
+$classStar = s($prefixer + '-css-var-1-rating-star')
+$classTag = s($prefixer + '-css-var-1-rating-tag')
+$classItem = s($prefixer + '-css-var-1-rating-item')
+$class-logo = s($prefixer-zebra + '-css-var-1-cclogo-loading')
+
+.{$class}
+  {'--' + $class + '-title-color'} #2F3742
+  {'--' + $class + '-r-left-color'} #2F5AFF
+  {'--' + $class + '-r-people-color'} #687583
+  {'--' + $classTag + '-item-bg-color'} #f8f8f8
+  {'--' + $classTag + '-item-color'} #687583
+  {'--' + $classItem + '-tag-color'} #2F5AFF
+  {'--' + $classItem + '-tag-bg-color'} rgba(47, 90, 255, 0.08)
+  {'--' + $classItem + '-tag-shadow-color'} rgba(47, 90, 255, 0.4)
+  {'--' + $classItem + '-dec-color'} #2F3742
+
+.ui-rating-text-loading
+  color #687583
+  font-style italic
+  text-align center
+
+
+.{$class}-loading
+  padding 30px 0
+  .{$class-logo}
+    margin 0 auto
+
+
+.{$class}-title
+  font-weight 600
+  font-size 24px
+  line-height 1.375
+  color #2F3742
+  color var(s('--' + $class + '-title-color'))
+  margin-bottom 18px
+  padding-left: 16px
+  @media (min-width ($max-body-width + 1px))
+    padding-left 0
+
+.{$class}-title-sub
+  font-size 18px
+
+.{$class}-info
+  overflow hidden
+  padding 0 16px 10px
+  @media (min-width ($max-body-width + 1px))
+    padding-left 0
+    padding-right 0
+
+.{$class}-r-left
+  float left
+  font-size 44px
+  color #2F5AFF
+  color var(s('--' + $class + '-r-left-color'))
+  font-weight 600
+  span
+    font-size 14px
+.{$class}-r-right
+  float left
+  margin-left 11px
+// 标签
+.{$class}-label
+  text-align left
+  padding 0 16px
+  margin-bottom 10px
+  max-height 71px
+  overflow hidden
+  @media (min-width ($max-body-width + 1px))
+    padding-left 0
+    padding-right 0
+
+.{$class}-r-people
+  margin 9px auto 4px
+  font-size 13px
+  color #687583
+  color var(s('--' + $class + '-r-people-color'))
+.{$class}-less-tips
+  font-size 13px
+  color #95A1AF
+  padding 20px 15px 24px
+
+.{$class}-load-more
+  margin-right 16px
+  padding-right 17px
+  color #2F5AFF
+  font-size 13px
+  line-height 44px
+  text-align right
+  cursor pointer
+  background url(https://n1other.hjfile.cn/res7/2018/11/15/396cf7799505500bb04babe98c4864aa.svg) no-repeat right center
+  background-size 12px
+  @media (min-width ($max-body-width + 1px))
+    & 
+      margin-right 0
+
+// 重写组件RatingStar样式
+.{$class}-r-star .{$classStar}-item
+  width 16px
+  height 16px
