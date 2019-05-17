@@ -1,5 +1,5 @@
 // cc 机器人的loading图标
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames/bind'
 import { PREFIX } from '../../utils/consts'
@@ -7,6 +7,9 @@ import styles from './styles.global.styl'
 
 const cx = classnames.bind(styles)
 const audioClass = `${PREFIX}-play-icon-5-rect-skew`
+import { isIE } from '../../utils/device-utils'
+
+const IS_IE = isIE()
 
 const SKIN = {
   blue: '#2F5AFF',
@@ -56,8 +59,26 @@ export default class LogoLoading extends Component {
           [`${audioClass}-to-play`]: status === AUDIO_STATUS.PAUSED,
           [`${audioClass}-to-pause`]: status === AUDIO_STATUS.PLAYING
         })}>
-          <rect className={cx(`${audioClass}-ring`)} x="0" y="8.65" rx="0" ry="0" width="103.4" height="103.4" fill={iconColor} stroke={iconColor}>
-          </rect>
+          <mask id={`${audioClass}-mask`}>
+            <circle className={cx(`${audioClass}-mask-circle`)} cx="34" cy="61" r="64" fill="white"></circle>
+          </mask>
+          
+          {
+            IS_IE
+              ? (
+                <Fragment>
+                  <polygon className={cx(`${audioClass}-ie-polygon`)} points="0, 0 103.4, 60 0,120" stroke={iconColor} fill={iconColor} />
+                  <rect className={cx(`${audioClass}-ie-rect`)} x="15" y="23.65" rx="0" ry="0" width="73.4" height="73.4" fill={iconColor} stroke={iconColor} strokeWidth="30" strokeLinejoin="round"></rect>
+                </Fragment>
+              )
+              : (
+                <g mask={`url(#${audioClass}-mask)`}>
+                  <rect className={cx(`${audioClass}-mask-rect`)} x="0" y="0" width="120" height="120" fill="none" />
+                  <rect className={cx(`${audioClass}-ring`)} x="0" y="8.65" rx="0" ry="0" width="103.4" height="103.4" fill={iconColor} stroke={iconColor}></rect>
+                </g>
+              )
+          }
+          
         </svg>
       </div>
     )
