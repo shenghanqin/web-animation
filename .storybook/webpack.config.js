@@ -11,7 +11,8 @@ module.exports = async ({ config, mode }) => {
     config.resolve.alias,
     {
       '@utils': path.resolve('utils'),
-      '@components': path.resolve('src')
+      '@components': path.resolve('src'),
+      '@svg-icons': path.resolve('svg-icons')
     }
   )
   config.module.rules.push(
@@ -46,6 +47,28 @@ module.exports = async ({ config, mode }) => {
       },
       {
         loader: 'stylus-loader'
+      }
+    ]
+  })
+
+  config.module.rules.push({
+    // 指定特定的目录用于 Inline SVG
+    // include: [path.resolve('./svg-icons')],
+    test: /\.svg$/,
+    use: [
+      // 读取 SVG 源代码
+      { loader: 'raw-loader' },
+      // 精简优化 SVG 源代码
+      {
+        loader: 'svgo-loader',
+        options: {
+          plugins: [
+            { removeTitle: true },
+            { removeViewBox: false },
+            { removeDimensions: true },
+            // ...其他参数
+          ]
+        }
       }
     ]
   })
