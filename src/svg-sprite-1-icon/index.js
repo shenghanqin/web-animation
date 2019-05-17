@@ -2,8 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { PREFIX } from '../../utils/consts'
 import styles from './styles.global.styl'
+const Icon = require(`!raw-loader!../../svg-icons/svg-sprite.svg`)
 
-
+console.log('Icon :', Icon)
 
 const prefixClass = `${PREFIX}-css-var-1-rating`
 const cx = require('classnames/bind').bind(styles)
@@ -17,7 +18,7 @@ export default class CssVar1Rating extends React.PureComponent {
   }
   componentDidMount() {
     this.setState({
-      iconStr: this.getIcon('svg-sprite')
+      iconStr: Icon.default
     })
     // console.log('getIcon :', 
     // console.log('123 :', 123);
@@ -29,6 +30,7 @@ export default class CssVar1Rating extends React.PureComponent {
   }
   render() {
     const { iconStr } = this.state
+    console.log('iconStr :', iconStr);
     return (
       <svg style={{ display: 'none' }} dangerouslySetInnerHTML={{ __html: iconStr }}>
       </svg>

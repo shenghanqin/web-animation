@@ -53,7 +53,7 @@ module.exports = async ({ config, mode }) => {
 
   config.module.rules.push({
     // 指定特定的目录用于 Inline SVG
-    include: [path.resolve('svg-icons')],
+    // include: [path.resolve('./svg-icons')],
     test: /\.svg$/,
     use: [
       // 读取 SVG 源代码
