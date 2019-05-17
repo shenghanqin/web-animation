@@ -9,15 +9,26 @@ $class = s($prefixer + '-play-icon-5-rect-skew')
   width: 100%
   height 100%
 
+.{$class}-mask-circle
+  transform-origin center
+  transition all 0.3s cubic-bezier(.54,-0.75,.47,1.58)
+  
+.{$class}-mask-rect
+  opacity: 0
+  
+
 .{$class}-ring
   transform-origin center
   transition all 0.3s cubic-bezier(.54,-0.75,.47,1.58)
   transform: rotate(-45deg) skew(15deg, 15deg) translate(-21%, -27%) scale(1.1) 
   stroke-linejoin round
 
-.{$class}-to-pause .{$class}-ring
-  transform: rotate(0) skew(0, 0) translate(0, 0) scale(0.8) 
-  stroke-width: 30
+.{$class}-to-pause
+  .{$class}-ring
+    transform: rotate(0) skew(0, 0) translate(0, 0) scale(0.8) 
+    stroke-width: 30
+  .{$class}-mask-circle
+    transform scale(2.2)
 
 .{$class}-ie-polygon
   transition all 0.3s ease-in-out

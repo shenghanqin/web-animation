@@ -59,6 +59,10 @@ export default class LogoLoading extends Component {
           [`${audioClass}-to-play`]: status === AUDIO_STATUS.PAUSED,
           [`${audioClass}-to-pause`]: status === AUDIO_STATUS.PLAYING
         })}>
+          <mask id={`${audioClass}-mask`}>
+            <circle className={cx(`${audioClass}-mask-circle`)} cx="34" cy="61" r="64" fill="white"></circle>
+          </mask>
+          
           {
             IS_IE
               ? (
@@ -68,9 +72,13 @@ export default class LogoLoading extends Component {
                 </Fragment>
               )
               : (
-                <rect className={cx(`${audioClass}-ring`)} x="0" y="8.65" rx="0" ry="0" width="103.4" height="103.4" fill={iconColor} stroke={iconColor}></rect>
+                <g mask={`url(#${audioClass}-mask)`}>
+                  <rect className={cx(`${audioClass}-mask-rect`)} x="0" y="0" width="120" height="120" fill="none" />
+                  <rect className={cx(`${audioClass}-ring`)} x="0" y="8.65" rx="0" ry="0" width="103.4" height="103.4" fill={iconColor} stroke={iconColor}></rect>
+                </g>
               )
           }
+          
         </svg>
       </div>
     )
