@@ -21,8 +21,9 @@ export default class BackTopExample extends Component {
           </div>
           <div className={cx('side-by-side')}>
             <svg width="240" height="240"><use xlinkHref="#src-svg-sprite-down-"/></svg>
-            <svg className={cx('svg-sprite-2-story-2')} width="240" height="240"><use xlinkHref="#src-svg-sprite-down-"/></svg>
+            <svg className={cx('svg-sprite-2-story-2')} width="240" height="240" style={{ color: 'red' }}><use xlinkHref="#src-svg-sprite-down-"/></svg>
           </div>
+          <div className={cx('svg-sprite-2-story-down')}></div>
           <SvgSprite2All></SvgSprite2All>
           <SvgSprite1Icon></SvgSprite1Icon>
         </React.StrictMode>
