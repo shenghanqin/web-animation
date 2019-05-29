@@ -56,8 +56,8 @@ module.exports = async ({ config, mode }) => {
     // include: [path.resolve('./svg-icons')],
     test: /\.svg$/,
     use: [
-      // 读取 SVG 源代码
-      { loader: 'raw-loader' },
+      { loader: 'svg-sprite-loader', options: {} },
+      'svg-transform-loader',
       // 精简优化 SVG 源代码
       {
         loader: 'svgo-loader',
